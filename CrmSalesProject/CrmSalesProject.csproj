@@ -110,6 +110,13 @@
     <Content Include="Global.asax" />
     <Content Include="Models\CrmSalesProjectModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CrmSalesProjectModel.edmx</DependentUpon>
+      <LastGenOutput>CrmSalesProjectModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\CrmSalesProjectModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>CrmSalesProjectModel.edmx</DependentUpon>
+      <LastGenOutput>CrmSalesProjectModel.cs</LastGenOutput>
     </Content>
     <Content Include="Scripts\bootstrap.bundle.min.js" />
     <Content Include="Scripts\bootstrap.js" />
@@ -118,9 +125,9 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>CrmSalesProjectModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="Models\CrmSalesProjectModel.edmx.diagram">
+    <Content Include="Models\CrmSalesProjectModel.edmx.diagram">
       <DependentUpon>CrmSalesProjectModel.edmx</DependentUpon>
-    </None>
+    </Content>
     <None Include="Scripts\jquery-3.3.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.3.1.js" />
     <Content Include="Scripts\jquery-3.3.1.min.js" />
@@ -137,6 +144,26 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="IRepositories\ICrmSalesProjectRepository.cs" />
+    <Compile Include="Models\CrmAccount.cs">
+      <DependentUpon>CrmSalesProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrmContact.cs">
+      <DependentUpon>CrmSalesProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrmLogin.cs">
+      <DependentUpon>CrmSalesProjectModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrmSalesProjectModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrmSalesProjectModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\CrmSalesProjectModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CrmSalesProjectModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Models\CrmSalesProjectModel.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -144,6 +171,8 @@
     </Compile>
     <Compile Include="Models\Login.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\CrmSalesProjectRepository.cs" />
+    <Compile Include="ViewModels\CrmAccountViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\web.config" />
@@ -169,6 +198,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

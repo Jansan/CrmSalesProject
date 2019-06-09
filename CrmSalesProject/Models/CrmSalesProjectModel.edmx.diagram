@@ -5,7 +5,7 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="66c06e0392ec49b38b2fee3e54295b81" Name="Diagram1">
-        <EntityTypeShape EntityType="CrmSalesProjectModel.CrmAccount" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CrmSalesProjectModel.CrmAccount" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
         <EntityTypeShape EntityType="CrmSalesProjectModel.CrmContact" Width="1.5" PointX="2.75" PointY="0.75" IsExpanded="true" />
         <EntityTypeShape EntityType="CrmSalesProjectModel.CrmLogin" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
       </Diagram>
